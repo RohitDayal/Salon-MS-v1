@@ -1,0 +1,711 @@
+/* Navbar Styling Start */
+.nav-bar {
+  /* background-color: rgb(255, 166, 0); */
+  background-color: #00aeb7;
+  /* background-color: black; */
+  display: flex;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+} 
+
+.nav-item:first-child {
+  margin-left: 2rem;
+}
+
+.nav-item:first-child a {
+  font-size: x-large;
+  color: #f42f2f;
+}
+
+.nav-item:nth-child(2) {
+  margin-left: 5rem;
+}
+
+.nav-item:last-child {
+  margin-left: auto;
+  margin-right: 2rem;
+  
+}
+.nav-item:last-child .nav-link {
+    border: 2.5px solid white;
+      border-radius: 2px;
+      transition: border-color 0.3s ease-in-out;
+      padding: 2px 20px;
+}
+.nav-item:last-child .nav-link:hover{
+    color:white;
+    text-decoration: none;
+}
+
+.nav-item{
+  margin: 10px;
+  padding: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.nav-link:hover {
+    color:#F8F8FF;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 7px;
+}
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 5px;
+  }
+
+  .nav-item:first-child,
+  .nav-item:nth-child(2),
+  .nav-item:last-child {
+    margin: 0;
+  }
+}
+
+
+/* Dropdown styling */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* .d-down {
+  position: relative;
+  display: inline-block;
+
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  left: 3rem;
+  background-color:#F8F8FF;
+  max-width: 1000px;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 11;
+}
+
+.dropdown-content a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.drop-fs{
+   font-size:14px;
+}
+.dropdown-img{
+  width:100%;
+  height: 160px;
+  overflow: hidden;
+}
+.dropdown-img img{
+  width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+}
+#hover{
+  /* font-size: small; */
+  text-align: left;
+}
+
+#hover:hover{
+  /* color: rgb(7, 192, 239); */
+  color: #0d6efd;
+  background-color: inherit;
+  transition: .2s;
+}
+/* Navbar Styling end */
+ /* Home page styling start */
+
+ .home-section{
+  padding-top: 200px;
+  color: white;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right;
+ }
+
+ .container-sec{
+    margin-top: 80px;
+    margin-bottom: 80px;
+ }
+
+ .heading-text{
+    font-size: 80px;
+
+ }
+ .sub-heading-text{
+  margin-top: 20px;
+ }
+ .button-container{
+  margin-top: 3rem;
+  
+ }
+ .salon-menu-btn{
+  letter-spacing: 2px;
+  /* background-color: rgb(255, 166, 0); */
+  background-color: #00aeb7;
+  padding: 13px 30px;
+  
+ }
+ .salon-booking-btn{
+  letter-spacing: 2px;
+  /* background-color: rgb(255, 166, 0); */
+  /* background-color: #00aeb7; */
+  border: 1px solid #F2F3F5;
+  padding: 13px 30px;
+  
+ }
+ .salon-menu-btn:hover{
+  /* background-color: rgb(220, 151, 24); */
+  background-color: #F2F3F5;
+  color: black;
+  border: 1px solid black;
+  transition: .2s;
+ }
+ .salon-booking-btn:hover{
+  /* background-color: rgb(220, 151, 24); */
+  background-color: #F2F3F5;
+  color: black;
+  border: 1px solid black;
+  transition: .2s;
+ }
+ .visit-our-gallery-btn{
+  background-color: rgb(13,202,240);
+  letter-spacing: 2px;
+  padding: 13px 30px;
+ }
+ .visit-our-gallery-btn:hover{
+  background-color: #F2F3F5;
+  color: black;
+  border: 1px solid black;
+  transition: .2s;
+
+ }
+ .time-scchedule{
+  font-size: large;
+  padding: 10px;
+ }
+  .opening-hour-container {
+    position: relative;
+  }
+
+  .opening-hour-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .home-section-middle{
+    margin-top: 5rem;
+    text-align: center;
+    padding: 3rem;
+  }
+  .home-section-middle h1{
+    font-size: 3rem;
+    font-weight: 550;
+    padding: 1rem 18rem;
+  }
+  .home-section-middle p{
+    color: #ef6f6f;
+  }
+  .custom-div{
+    height: 550px;
+  }
+  .custom-div img, .custom-div-middle-2 img, .home-middle-comp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .custom-div-middle-1{
+    background-color: #efe8e8;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    /* border-radius: 10px; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .custom-div-middle-2{
+    height: 300px;
+  }
+  .feature-section-icon{
+    padding: 10px;
+    text-align: center;
+  }
+  .feature-section-icon h3{
+    margin: 15px;
+  }
+  .feature-section-icon p{
+    padding: 0 10px;
+  }
+  .home-page-service-icon{
+    height: 5.5rem;
+    color: #ef6f6f;
+  }
+  /* home-middle-component styling start */
+  .home-middle-comp,.home-middle-comp div{
+    padding: 5rem 1rem;
+  }
+  
+  .home-middle-comp-div1{
+   padding-top: 10rem;
+  }
+    .home-middle-comp.home-middle-comp-div1 h6,.home-middle-comp.home-middle-comp-div1 h1,.home-middle-comp.home-middle-comp-div1 p {
+      margin-top: 20px;
+      padding: 10px;
+    }
+  
+
+ /* Home page styling end */
+.button {
+  font-size: 1rem;
+  padding: 10px;
+  height: 50px;
+  width: auto;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+} 
+.button a{
+  padding: 1rem 3rem;
+  font-weight:580;
+  
+}
+.button:hover {
+  background-color: #2eb7e5;
+  box-shadow: 0px 15px 20px rgba(152, 154, 156, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+ 
+}
+
+/* Hero-banner styling start */
+.hero-banner{
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 600px) {
+  .hero-banner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.hero-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+.hero-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+.hero-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+
+
+
+
+/* Authentication Styling start */
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+  /* height: 100vh; */
+}
+
+.Auth-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+.Auth-btn{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+
+.toggle-btn {
+  margin-top: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  height: 50px;
+  width: 160px;
+  border: none;
+  background-color:inherit;
+  cursor: pointer;
+}
+
+.login-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  background-color: #F2F3F5;
+
+}
+
+/* Authentication Styling end */
+
+/* About - Top- Banner Styling start */
+
+.top-banner{
+  color:white;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-inner-banner h1 {
+    font-size: 50px;
+    text-align: center;
+}
+.top-inner-banner p{
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+.about-section{
+    margin-top: 6rem;
+}
+.about-section-left{
+  padding: 10px;
+}
+.about-section-left h4{
+  color: rgb(112, 110, 110);
+}
+.about-section-left h1{
+  font-weight: bolder;
+  color: rgb(72, 68, 68);
+}
+.about-section-left p{
+  color: rgb(98, 93, 93);
+  line-height: 1.6;
+  font-size: large;
+  margin: 40px 0px;
+}
+.about-section-right p{
+  color: rgb(98, 93, 93);
+  line-height: 1.6;
+  font-size: large;
+  margin: 40px 0px;
+}
+.about-image-left img{
+  width: 95%;
+  height: auto;
+  display: block;
+
+}
+.about-image-right img{
+  width: 95%;
+  height: auto;
+  display: block;
+}
+
+/* Service-list-container styling start */
+
+.service-container{
+  margin: 4rem 0;
+}
+.ser-cont-item{
+    padding: 10px;
+}
+.ser-cont-item > h2{
+  margin: 4rem 2rem 3rem 0;
+}
+/* Services gallery styling start  */
+.img-container{
+  margin-top: 20px;
+}
+.img-container img:hover{
+     transform: scale(1.1);
+     transition-duration: 0.4s;
+     cursor: pointer;
+}
+.gallery-container{
+  padding: 2.5rem;
+}
+
+/* Service icon  */
+.service-icon-top-sec {
+  text-align: center;
+}
+.service-icon-top-sec > h1{
+  font-size:48px;
+}
+.service-icon-top-sec p:first-child{
+color: #ef6f6f;
+}
+.service-icon-top-sec p:last-child{
+  /* padding: 2% 20%; */
+  color: rgb(104, 100, 100);
+}
+
+.service-icon-bottom {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 5% 10%;
+}
+.service-icon-bottom div{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.service-section-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.service-section-icon h1{
+  margin: 1.2rem 0rem;
+}
+.service-icon{
+  width: 6rem;
+  height: auto;
+  display:block;
+
+}
+
+/* -------------------------------------------------------------- */
+/* Schedule component start */
+.schedule-container {
+  max-width: 800px;
+  /* Adjust as needed */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.day,
+.time {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.time-schedule {
+  margin-top: 20px;
+}
+
+.time-schedule h3,
+.time-schedule h4,
+.time-schedule p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    grid-template-columns: 1fr;
+  }
+}
+/* schedule component ends */
+/* ------------------------------------------ */
+
+/* BookingPage component start */
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 3;
+}
+
+#overlay-content {
+  position: absolute;
+  width: 56%;
+  top: 55%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  background-color: #fdfcfc;
+  cursor: pointer; 
+  max-height: 85%; 
+  overflow: hidden; 
+
+  box-sizing: border-box;
+}
+.salon-store-list{
+  height: 400px;
+  overflow-y: auto;
+}
+ .salon-detail p:first-child{
+  margin-top: 5px;
+  padding-top: 5px;
+ }
+.salon-detail p{
+  font-size: small;
+  margin-bottom: 5px;
+}
+.salon-detail:hover{
+  background-color: #f5f5f5;
+}
+
+/* Scrollbar styling for WebKit browsers (Chrome, Safari) */
+.salon-store-list::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+.salon-store-list::-webkit-scrollbar-thumb {
+  background-color: #aeadad;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Roundness of the scrollbar thumb */
+  border: 2px solid #fdfcfc;
+  /* Padding around the thumb */
+}
+
+.salon-store-list::-webkit-scrollbar-thumb:hover {
+  background-color: #6d6b6b;
+  /* Hover color of the scrollbar thumb */
+}
+
+.salon-store-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
+  border-radius: 10px;
+  /* Roundness of the scrollbar track */
+  border: 2px solid #fdfcfc;
+  /* Padding around the track */
+}
+
+/* overlay end*/
+
+
+
+.booking-header{
+  border:1px solid #00aeb7;
+}
+.booking-header h6{
+  background-color: #00aeb7;
+  padding: 11px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+.service-content{
+  border: 1px solid #d3e5e6;
+}
+.service-category{
+  border-bottom:1px solid #d3e5e6;
+}
+.span-circle{
+  padding: 12px;
+  border: 1px solid #00aeb7;
+}
+.service-content:hover .span-circle {
+  background-color: #00aeb7;
+  transition: .2s;
+  /* Change this to your desired color */
+}
+
+/* .selected-salon-detail .service-category:hover{
+    background-color: black;
+    color: white;
+} */
+.selected-salon-detail .active-category{
+    background-color: black;
+    color: white;
+}
+/* BookingPage component end */
+
+
+/* Profile section start */
+.profile-section{
+  text-align: center;
+}
+/* Profile section end */

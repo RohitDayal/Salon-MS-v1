@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body{
+  background-color: #F8F8FF;
+}
+
+.p-10px{
+  padding: 10px;
+}
+.p-12px{
+  padding: 12px;
+}
+.l-space{
+  letter-spacing: .5px;
+}
+.pointer{
+  cursor: pointer;
+}
+
+/* in overlaySearch component */
+.custom-focus:focus {
+  outline: none;
+  /* Remove default outline */
+  box-shadow: 0 0 0 0.2rem rgba(39, 203, 224, 0.25);
+  /* Add custom outline */
+  border-color: #00AFB8;
+  /* Change border color */
+}
+.fs-14px{
+  font-size: 14px;
+}
+.fs-15px{
+  font-size: 15px;
+}
+/* end */
