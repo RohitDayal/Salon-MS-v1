@@ -46,6 +46,7 @@ const createTables = async () => {
         price DECIMAL(10, 2) NOT NULL,
         duration INT NOT NULL,
         category_id INT,
+         description VARCHAR(255),
         FOREIGN KEY (category_id) REFERENCES category(category_id)
       )
     `);
@@ -61,6 +62,40 @@ const createTables = async () => {
       )
     `);
     console.log("services_provided table created");
+
+    await connection.query(`
+        CREATE TABLE IF NOT EXISTS salon_time_slot (
+        salon_id INT,
+        date DATE,
+        slot1 INT DEFAULT 2,
+        slot2 INT DEFAULT 2,
+        slot3 INT DEFAULT 2,
+        slot4 INT DEFAULT 2,
+        slot5 INT DEFAULT 2,
+        slot6 INT DEFAULT 2,
+        slot7 INT DEFAULT 2,
+        slot8 INT DEFAULT 2,
+        slot9 INT DEFAULT 2,
+        slot10 INT DEFAULT 2,
+        slot11 INT DEFAULT 2,
+        slot12 INT DEFAULT 2,
+        slot13 INT DEFAULT 2,
+        slot14 INT DEFAULT 2,
+        slot15 INT DEFAULT 2,
+        slot16 INT DEFAULT 2,
+        slot17 INT DEFAULT 2,
+        slot18 INT DEFAULT 2,
+        slot19 INT DEFAULT 2,
+        slot20 INT DEFAULT 2,
+        slot21 INT DEFAULT 2,
+        slot22 INT DEFAULT 2,
+        slot23 INT DEFAULT 2,
+        slot24 INT DEFAULT 2,
+        PRIMARY KEY (salon_id, date),
+        FOREIGN KEY (salon_id) REFERENCES salon(salon_id)
+    )
+    `);
+    console.log("salon_time_slot table created");
 
     connection.release();
   } catch (error) {

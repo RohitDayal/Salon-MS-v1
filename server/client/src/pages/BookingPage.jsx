@@ -3,7 +3,7 @@ import OverlaySearch from "../components/OverlaySearch";
 import SelectedSalonDetail from "../components/SelectedSalonDetail";
 
 const BookingPage = () => {
-  const [display, setDisplay] = useState("none");
+  const [display, setDisplay] = useState("block");
   const [services, setServices] = useState([]);
   const [filteredServices, setFilteredServices] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,9 +14,7 @@ const BookingPage = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `/api/services?message=${encodeURIComponent(
-            "from booking page"
-          )}`
+          `/api/services?message=${encodeURIComponent("from booking page")}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -29,7 +27,7 @@ const BookingPage = () => {
         // Handle error fetching data
       }
     };
-   
+
     fetchData();
   }, []); // Empty dependency array ensures useEffect runs only once on mount
 
@@ -37,44 +35,28 @@ const BookingPage = () => {
     setDisplay((prevDisplay) => (prevDisplay === "none" ? "block" : "none"));
   };
 
-  // const handleSearch = (e) => {
-  //   const { value } = e.target;
-  //   setSearchQuery(value);
+  const handleSearch = (e) => {
+    const { value } = e.target;
+    setSearchQuery(value);
 
-  //   if (value.trim() === "") {
-  //     setShowContent(false);
-  //   } else {
-  //     setShowContent(true);
-  //   }
+    if (value.trim() === "") {
+      setShowContent(false);
+    } else {
+      setShowContent(true);
+    }
 
-  //   // Filter services based on search query
-  //   const filtered = services.filter((service) =>
-  //     service.service_name.toLowerCase().includes(value.toLowerCase())
-  //   );
-  //   setFilteredServices(filtered);
-  // };
-const handleSearch = (e) => {
-  const { value } = e.target;
-  setSearchQuery(value);
-
-  if (value.trim() === "") {
-    setShowContent(false);
-  } else {
-    setShowContent(true);
-  }
-
-  // Filter services based on search query
-  const filtered = services.filter((service) => {
-    const searchValue = value.toLowerCase();
-    return (
-      service.service_name.toLowerCase().includes(searchValue) ||
-      service.category_name.toLowerCase().includes(searchValue) ||
-      service.price.toString().includes(searchValue) ||
-      service.duration.toString().includes(searchValue)
-    );
-  });
-  setFilteredServices(filtered);
-};
+    // Filter services based on search query
+    const filtered = services.filter((service) => {
+      const searchValue = value.toLowerCase();
+      return (
+        service.service_name.toLowerCase().includes(searchValue) ||
+        service.category_name.toLowerCase().includes(searchValue) ||
+        service.price.toString().includes(searchValue) ||
+        service.duration.toString().includes(searchValue)
+      );
+    });
+    setFilteredServices(filtered);
+  };
 
   return (
     <>
@@ -119,7 +101,7 @@ const handleSearch = (e) => {
                   onChange={handleSearch}
                 />
               </form>
-              {showContent ? (
+              {showContent ? ( //this is direct search content
                 <div className="service-search-result mt-4">
                   {filteredServices.map((service) => (
                     <div
@@ -139,11 +121,7 @@ const handleSearch = (e) => {
                           <p className="fw-bold fs-14px mb-0">
                             {service.service_name}
                           </p>
-                          <p className="fs-14px">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Dolores, doloremque. Reprehenderit,
-                            voluptatum?
-                          </p>
+                          <p className="fs-14px">{service.description}</p>
                         </div>
                         <div className="col-5">
                           <p className="fs-14px mb-1 fw-bold">

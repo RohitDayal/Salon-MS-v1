@@ -701,6 +701,65 @@ color: #ef6f6f;
     background-color: black;
     color: white;
 }
+
+
+
+.date-header {
+  background-color: #00aeb7;
+  color: white;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+}
+
+.time-slots {
+  padding: 2px 10px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+
+.time-slot input {
+  margin-right: 10px;
+}
+
+.time-slots::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+.time-slots::-webkit-scrollbar-thumb {
+  background-color: #aeadad;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Roundness of the scrollbar thumb */
+  border: 2px solid #fdfcfc;
+  /* Padding around the thumb */
+}
+
+.time-slots::-webkit-scrollbar-thumb:hover {
+  background-color: #6d6b6b;
+  /* Hover color of the scrollbar thumb */
+}
+
+.time-slots::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
+  border-radius: 10px;
+  /* Roundness of the scrollbar track */
+  border: 2px solid #fdfcfc;
+  /* Padding around the track */
+}
+
+.invoice-container {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
 /* BookingPage component end */
 
 

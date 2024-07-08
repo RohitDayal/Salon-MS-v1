@@ -5,7 +5,7 @@ const getAllServices = async (req, res) => {
   const message = req.query.message; // Assuming the client sends a query parameter ?message=Hello%2C%20server%21
 
   const query = `
-    SELECT s.service_id, s.service_name, s.price, s.duration, c.category_id, c.name AS category_name
+    SELECT s.service_id, s.service_name, s.price, s.duration, s.description, c.category_id, c.name AS category_name
     FROM services s
     JOIN category c ON s.category_id = c.category_id
     order by c.name
@@ -54,6 +54,7 @@ const getSalonData = async (req, res) => {
       sv.service_name,
       sv.price,
       sv.duration,
+      sv.description,
       c.name as category_name
     FROM 
       services_provided sp
