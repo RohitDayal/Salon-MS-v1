@@ -97,6 +97,29 @@ const createTables = async () => {
     `);
     console.log("salon_time_slot table created");
 
+    await connection.query(`
+       CREATE TABLE IF NOT EXISTS orders (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT,
+        salon_id INT,
+        service_id INT,
+        appointment_date DATETIME,
+        amount DECIMAL(10, 2),
+        email VARCHAR(50),
+        payment_status ENUM('Pending', 'Completed', 'Failed') DEFAULT 'Pending',
+        order_id VARCHAR(255),
+        payment_id VARCHAR(255),
+        payment_signature VARCHAR(255),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        FOREIGN KEY (user_id) REFERENCES users(UserID),
+        FOREIGN KEY (salon_id) REFERENCES salon(salon_id),
+        FOREIGN KEY (service_id) REFERENCES services(service_id)
+    )
+
+    `);
+    console.log("orders table created");
+
     connection.release();
   } catch (error) {
     console.error("Database Error:", error.message);

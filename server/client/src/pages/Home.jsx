@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HomeMiddleComp from "../components/HomeMiddleComp";
-import WeatherComponent from "../components/WeatherComponent";
+// import WeatherComponent from "../components/WeatherComponent";
 // import HeroBanner from "../components/HeroBanner";
 
 const Home = () => {
@@ -23,11 +23,8 @@ const Home = () => {
                 <Link to="/services" className="salon-menu-btn shadow">
                   VIEW SALON MENU
                 </Link>
-                <Link
-                  to="/book"
-                  className="salon-booking-btn shadow ms-4"
-                >
-                 BOOK APPOINTMENT
+                <Link to="/book" className="salon-booking-btn shadow ms-4">
+                  BOOK APPOINTMENT
                 </Link>
               </div>
             </div>
@@ -81,7 +78,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container container-sec">
+      <div className="container container-sec mb-3">
         <div className="row">
           <div className="col-12 col-md-6 col-lg-3">
             <div className="feature-section-icon">
@@ -139,12 +136,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      {/* Button for booking */}
+      <div className="text-center text-light py-5 m-3">
+        <Link to="/book" className="salon-menu-btn shadow">
+          BOOK APPOINTMENT
+        </Link>
+      </div>
       <HomeMiddleComp />
 
       {/* <HeroBanner /> */}
 
-      <WeatherComponent/>
+      {/* <WeatherComponent /> */}
     </>
   );
 };

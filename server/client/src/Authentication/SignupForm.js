@@ -8,43 +8,41 @@ const SignupForm = () => {
   const [mail, setMail] = useState("");
   const [isLoginMode, setIsLoginMode] = useState(false);
 
- const signup = (ev) => {
-   ev.preventDefault();
+  const signup = (ev) => {
+    ev.preventDefault();
 
-   fetch("/users/signup", {
-     method: "POST",
-     body: JSON.stringify({ name, mail, password }),
-     headers: { "Content-Type": "application/json" },
-   })
-     .then((response) => {
-       if (response.ok) {
-         return response.json().then((data) => {
-           setName("");
-           setPassword("");
-           setMail("");
-           alert("Registration successful");
-         });
-       } else {
-         return response.json().then((data) => {
-           console.error("Signup Error:", data.error);
-           alert(`Registration failed: ${data.error}`);
-         });
-       }
-     })
-     .catch((error) => {
-       console.error("Signup Error:", error.message);
-       alert("Registration failed: Internal server error.");
-     });
- };
+    fetch("/users/signup", {
+      method: "POST",
+      body: JSON.stringify({ name, mail, password }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json().then((data) => {
+            setName("");
+            setPassword("");
+            setMail("");
+            alert("Registration successful");
+          });
+        } else {
+          return response.json().then((data) => {
+            console.error("Signup Error:", data.error);
+            alert(`Registration failed: ${data.error}`);
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Signup Error:", error.message);
+        alert("Registration failed: Internal server error.");
+      });
+  };
 
-
-  
   const handleToggleMode = () => {
     setIsLoginMode((prevMode) => !prevMode);
   };
   return (
     <>
-      {isLoginMode ? (
+      {!isLoginMode ? (
         <LoginForm />
       ) : (
         <div className="Auth-form-container">

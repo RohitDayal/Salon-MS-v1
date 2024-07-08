@@ -49,3 +49,53 @@ body{
 /* end */
 
 
+
+
+#footer {
+  color: white;
+  padding: 30px;
+  background-color: #005e63;
+}
+
+.upperPart {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.footerlink {
+  color: rgb(208, 203, 203);
+  display: block;
+  margin: 10px 0;
+}
+
+.footerlink:hover {
+  color: rgb(237, 239, 240);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+input[type=email] {
+
+  padding: 5px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+}
+
+.social {
+  padding: 40px;
+  text-align: center;
+}
+
+.sociallink {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 10px;
+  font-size: x-large;
+}
+
+.sociallink:hover {
+  color: rgb(199, 201, 204);
+}

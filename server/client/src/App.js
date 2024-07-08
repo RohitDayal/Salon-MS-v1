@@ -12,6 +12,9 @@ import BookingPage from "./pages/BookingPage";
 import CreateSalon from "./pages/CreateSalon";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
+import ScrollToTop from "./utils/ScrollToTop";
+import Payment from "./utils/Payment";
 function App() {
   return (
     <div className="App">
@@ -20,6 +23,7 @@ function App() {
           <div style={{ height: "65px" }}></div>
           <ToastContainer />
           <Navbar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -28,7 +32,9 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/book" element={<BookingPage />} />
             <Route path="/create-salon" element={<CreateSalon />} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
+          <Footer />
         </UserContextProvider>
       </BrowserRouter>
     </div>

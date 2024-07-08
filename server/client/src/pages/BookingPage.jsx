@@ -60,7 +60,7 @@ const BookingPage = () => {
 
   return (
     <>
-      <div className="container mt-5 px-4 pt-2 shadow" style={{ width: "80%" }}>
+      <div className="container my-5 px-4 pt-2 shadow" style={{ width: "80%" }}>
         <div className="booking-header">
           <h6 className="text-center">The Saloon</h6>
           <p className="px-2" style={{ fontSize: "12px" }}>
@@ -71,7 +71,7 @@ const BookingPage = () => {
           </p>
         </div>
         <div className="row mt-2">
-          <div className="col-12 col-md-8">
+          <div className="col-12 col-md-8 pb-4">
             <div className="store-section">
               <p className="fw-bold mb-0">STORE</p>
               <div className="row border border-2 py-2 mx-0">
