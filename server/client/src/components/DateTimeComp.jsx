@@ -374,7 +374,7 @@ const DateTimeComp = ({ salonId, selectedService, salonData }) => {
     const amount = selectedService?.price;
 
     // Fetch order from backend
-    const data = await fetch("http://localhost:5000/api/payment/create", {
+    const data = await fetch("/api/payment/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -404,16 +404,13 @@ const DateTimeComp = ({ salonId, selectedService, salonData }) => {
           razorpay_signature: response.razorpay_signature,
         };
 
-        const verifyResponse = await fetch(
-          "http://localhost:5000/api/payment/verify",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(verificationData),
-          }
-        ).then((res) => res.json());
+        const verifyResponse = await fetch("/api/payment/verify", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(verificationData),
+        }).then((res) => res.json());
 
         if (verifyResponse.message === "Payment verified") {
           toast.success("Your appointment confirmed", {

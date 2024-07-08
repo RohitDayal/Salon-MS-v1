@@ -15,7 +15,7 @@ const createTables = require("./models/createTables");
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "client", "build")));
+// app.use(express.static(path.join(__dirname, "client", "build")));
 // app.use((req, res, next) => {
 //   console.log(`${req.method} request for ${req.url}`);
 //   next();
@@ -27,9 +27,9 @@ app.use("/api", dataServices);
 app.use("/create-saloon", createSaloon);
 app.use("/users", usersRoute);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
 
 // Ensure tables are created before starting the server
 const port = process.env.PORT || 5000;
