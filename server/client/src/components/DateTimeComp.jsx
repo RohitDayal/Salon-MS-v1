@@ -251,7 +251,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
 import "../Temp/Invoice.css";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AvailableSlots = ({
@@ -402,6 +401,16 @@ const DateTimeComp = ({ salonId, selectedService, salonData }) => {
           razorpay_order_id: response.razorpay_order_id,
           razorpay_payment_id: response.razorpay_payment_id,
           razorpay_signature: response.razorpay_signature,
+          details: {
+            userEmail: userInfo?.Email,
+            userFullName: userInfo?.Name,
+            salonName: salonData[0]?.salon_name,
+            serviceName: selectedService?.service_name,
+            amount: selectedService?.price,
+            serviceDuration: selectedService?.duration,
+            appointmentDate: formattedDate,
+            appointmentTime: selectedTime,
+          },
         };
 
         const verifyResponse = await fetch("/api/payment/verify", {
