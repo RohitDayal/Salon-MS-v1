@@ -125,7 +125,7 @@ const SearchBar = () => {
 
   const resultStyle = {
     padding: "6px 15px",
-    background: "#f4f4f4",
+    background: "#F2F3F5",
     borderBottom: "1px solid #ddd",
     cursor: "pointer",
   };
@@ -137,24 +137,20 @@ const SearchBar = () => {
 
   return (
     <div style={{ position: "relative", width: "400px" }}>
-      <input
-        type="text"
-        placeholder="Search..."
-        value={query}
-        onChange={handleInputChange}
-        style={{
-          padding: "5px",
-          margin: "10px 0",
-          width: "70%",
-          boxSizing: "border-box",
-          fontSize: "16px",
-          borderRadius: "20px", // Rounded corners
-          border: "1px solid #ddd", // Light border
-          outline: "none", // Remove outline
-        }}
-        onFocus={(e) => (e.target.style.border = "1px solid yellow")} // Remove black border on focus
-        onBlur={(e) => (e.target.style.border = "1px solid #ddd")} // Light border on blur
-      />
+      <form
+        className="form-inline my-2 px-4 my-lg-0"
+        onSubmit={(e) => e.preventDefault()}
+      >
+        <input
+          className="form-control rounded-4 mr-sm-2 custom-focus fs-14px"
+          type="search"
+          placeholder="Search disabled"
+          value={query}
+          onChange={handleInputChange}
+          style={{ maxWidth: "300px" }}
+          disabled
+        />
+      </form>
       {query && (
         <ul
           style={{

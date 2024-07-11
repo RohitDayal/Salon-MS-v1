@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const descriptionStyle = {
     color: "rgb(191, 194, 196)",
-    paddingRight: "120px",
-  };
-
-  const readMoreStyle = {
-    textDecoration: "none",
-    color: "rgb(213, 213, 17)",
-    fontSize: "large",
+    // paddingRight: "120px",
   };
 
   const socialStyle = {
@@ -22,7 +16,7 @@ const Footer = () => {
       <div className="upperPart">
         <h2>Contact us</h2>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-sm-6 text-light">
           <Link to="/home">
             <h3>
@@ -90,7 +84,92 @@ const Footer = () => {
             Privacy
           </Link>
         </div>
+      </div> */}
+      <div className="">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 mb-4 text-light">
+            <Link to="/home">
+              <h3>
+                sa<span style={{ color: "yellow" }}>Loon</span>
+              </h3>
+            </Link>
+            <p style={descriptionStyle} className="mb-0">
+              Lonsectetur adipisicing elit. Numlaudantium, animi maiores aliquam
+              eos culpa impedit aut eligend
+            </p>
+            <Link
+              to="/"
+              style={{ color: "rgb(213, 213, 17)", marginBottom: "10px" }}
+            >
+              read more
+            </Link>
+
+            <form
+              className="form-inline my-2 my-lg-0"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <input
+                className="form-control rounded-1 mr-sm-2 custom-focus fs-15px mb-2"
+                type="email"
+                placeholder="example@gmail.com"
+                style={{ maxWidth: "380px" }}
+              />
+              <button type="submit" className="btn btn-danger rounded-1">
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h4>Services</h4>
+            <Link to="/" className="footerlink d-block">
+              Hair Care
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Nail Services
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Makeup Services
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Men's Grooming
+            </Link>
+          </div>
+
+          <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h4>About</h4>
+            <Link to="/" className="footerlink d-block">
+              Staff
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Team
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Careers
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Blog
+            </Link>
+          </div>
+
+          <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h4>Resources</h4>
+            <Link to="/" className="footerlink d-block">
+              Security
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Global
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Chart
+            </Link>
+            <Link to="/" className="footerlink d-block">
+              Privacy
+            </Link>
+          </div>
+        </div>
       </div>
+
       <div className="social pb-0" style={socialStyle}>
         <Link
           to="mailto:rohitrox36@gmail.com"

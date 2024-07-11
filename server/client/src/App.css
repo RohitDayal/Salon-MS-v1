@@ -1,106 +1,130 @@
 /* Navbar Styling Start */
-.nav-bar {
-  /* background-color: rgb(255, 166, 0); */
-  background-color: #00aeb7;
-  /* background-color: black; */
-  display: flex;
-  top: 0;
+nav {
   position: fixed;
+  top: 0;
   width: 100%;
+  height: 65px;
+  background-color: #00aeb7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-} 
-
-.nav-item:first-child {
-  margin-left: 2rem;
+  z-index: 4;
 }
 
-.nav-item:first-child a {
-  font-size: x-large;
-  color: #f42f2f;
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-.nav-item:nth-child(2) {
-  margin-left: 5rem;
-}
-
-.nav-item:last-child {
-  margin-left: auto;
-  margin-right: 2rem;
-  
-}
-.nav-item:last-child .nav-link {
-    border: 2.5px solid white;
-      border-radius: 2px;
-      transition: border-color 0.3s ease-in-out;
-      padding: 2px 20px;
-}
-.nav-item:last-child .nav-link:hover{
-    color:white;
-    text-decoration: none;
-}
-
 .nav-item{
-  margin: 10px;
-  padding: 5px;
+  height: 100%;
 }
-
-.nav-link {
+.nav-item .nav-link {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: white;
-  text-align: center;
   font-size: large;
+  font-weight: lighter;
+  color: #F8F8FF;
 }
 
-.nav-link:hover {
-    color:#F8F8FF;
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 7px;
+.nav-item .nav-link:hover {
+  color: #F8F8FF;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
 }
-@media screen and (max-width: 600px) {
-  .nav-bar {
+
+nav .left-last-item {
+  margin-right: auto;
+}
+
+nav svg {
+  fill: #F8F8FF;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+@media(max-width:576px) {
+  .links-container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 200px;
+
+    background-color: #005e63;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+    overflow-y: auto;
+  }
+  .nav-item{
+    height:auto;
+    width: 100%;
+  }
+  .nav-item .nav-link {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    font-size: medium;
+    padding: 15px 30px;
+    justify-content: flex-start;
   }
 
-  .nav-item {
-    margin: 5px;
+  .nav-item .nav-link:hover {
+    background-color: #037076;
+    text-decoration: none;
   }
 
-  .nav-item:first-child,
-  .nav-item:nth-child(2),
-  .nav-item:last-child {
-    margin: 0;
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked~.links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked~#overlay-for-nav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
   }
 }
-
 
 /* Dropdown styling */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* .d-down {
-  position: relative;
-  display: inline-block;
-
-} */
 
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 3.5rem;
-  left: 3rem;
-  background-color:#F8F8FF;
-  max-width: 1000px;
-  width: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  top: 3rem;
+  left: 50%;
+  /* Position the left edge at the center of the parent */
+  transform: translateX(-50%);
+  background-color: #F8F8FF;
+  width: 100%;
+  max-width: 900px;
   z-index: 11;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -110,7 +134,7 @@
   display: block;
 }
 
-.nav-item:hover .dropdown-content {
+nav .left-last-item:hover .dropdown-content {
   display: block;
 }
 
@@ -146,100 +170,124 @@
 /* Navbar Styling end */
  /* Home page styling start */
 
- .home-section{
+.home-section {
   padding-top: 200px;
   color: white;
-  height: 600px;
+  min-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
- }
+}
 
- .container-sec{
-    margin-top: 80px;
-    margin-bottom: 80px;
- }
+.container-sec {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
- .heading-text{
-    font-size: 80px;
+.heading-text {
+  font-size: 80px;
+}
 
- }
- .sub-heading-text{
+.sub-heading-text {
   margin-top: 20px;
- }
- .button-container{
+}
+
+.button-container {
   margin-top: 3rem;
-  
- }
- .salon-menu-btn{
+}
+
+.salon-menu-btn {
   letter-spacing: 2px;
-  /* background-color: rgb(255, 166, 0); */
   background-color: #00aeb7;
   padding: 13px 30px;
-  
- }
- .salon-booking-btn{
+  border: 1px solid #F2F3F5;
+}
+
+.salon-booking-btn {
   letter-spacing: 2px;
-  /* background-color: rgb(255, 166, 0); */
-  /* background-color: #00aeb7; */
   border: 1px solid #F2F3F5;
   padding: 13px 30px;
-  
- }
- .salon-menu-btn:hover{
-  /* background-color: rgb(220, 151, 24); */
+}
+
+.salon-menu-btn:hover {
   background-color: #F2F3F5;
   color: black;
   border: 1px solid black;
-  transition: .2s;
- }
- .salon-booking-btn:hover{
-  /* background-color: rgb(220, 151, 24); */
+  transition: 0.2s;
+}
+
+.salon-booking-btn:hover {
   background-color: #F2F3F5;
   color: black;
   border: 1px solid black;
-  transition: .2s;
- }
- .visit-our-gallery-btn{
-  background-color: rgb(13,202,240);
+  transition: 0.2s;
+}
+
+.visit-our-gallery-btn {
+  background-color: rgb(13, 202, 240);
   letter-spacing: 2px;
   padding: 13px 30px;
- }
- .visit-our-gallery-btn:hover{
+}
+
+.visit-our-gallery-btn:hover {
   background-color: #F2F3F5;
   color: black;
   border: 1px solid black;
-  transition: .2s;
+  transition: 0.2s;
+}
 
- }
- .time-scchedule{
+.time-schedule {
   font-size: large;
   padding: 10px;
- }
-  .opening-hour-container {
-    position: relative;
+}
+
+.opening-hour-container {
+  position: relative;
+}
+
+.opening-hour-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .home-section {
+    display: flex;
+    align-items: last baseline;
+    padding-top: 100px;
+    background-position: calc(88% + 50px) center;
+    background-attachment: scroll;
+  }
+
+  .heading-text {
+    font-size: 30px;
+  }
+
+  .sub-heading-text {
+    font-size: 16px;
+    margin-bottom: 1rem;
+
+  }
+  .button-container{
+    margin-top:auto;
+  }
+  .salon-menu-btn,
+  .salon-booking-btn {
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    max-width: 240px;
   }
 
   .opening-hour-bottom-right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    display: none;
+    position: static;
+    margin-top: 20px;
   }
+}
 
-  .home-section-middle{
-    margin-top: 5rem;
-    text-align: center;
-    padding: 3rem;
-  }
-  .home-section-middle h1{
-    font-size: 3rem;
-    font-weight: 550;
-    padding: 1rem 18rem;
-  }
-  .home-section-middle p{
-    color: #ef6f6f;
-  }
   .custom-div{
     height: 550px;
   }
@@ -407,8 +455,10 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 0;
   background-color: #F2F3F5;
+  /* overflow: hidden; */
+  box-sizing: border-box;
 
 }
 
@@ -618,6 +668,16 @@ color: #ef6f6f;
 
   box-sizing: border-box;
 }
+@media (max-width: 768px) {
+    #overlay-content{
+     width: 100%;
+     height: 80%;
+    }
+    #booking-section{
+      width: 100%;
+     
+    }
+}
 .salon-store-list{
   height: 400px;
   overflow-y: auto;
@@ -665,7 +725,15 @@ color: #ef6f6f;
 
 /* overlay end*/
 
+#booking-section{
+  width: 80%;
+}
+@media (max-width: 768px) {
+  #booking-section {
+    width: 100%;
 
+  }
+}
 
 .booking-header{
   border:1px solid #00aeb7;
@@ -768,3 +836,47 @@ color: #ef6f6f;
   text-align: center;
 }
 /* Profile section end */
+
+
+
+/* Footer Styling start */
+#footer {
+  color: white;
+  padding: 30px;
+  background-color: #005e63;
+}
+
+.upperPart {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.footerlink {
+  color: rgb(208, 203, 203);
+  display: block;
+  margin: 10px 0;
+}
+
+.footerlink:hover {
+  color: rgb(237, 239, 240);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.social {
+  padding: 40px;
+  text-align: center;
+}
+
+.sociallink {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 10px;
+  font-size: x-large;
+}
+
+.sociallink:hover {
+  color: rgb(199, 201, 204);
+}
+/* Footer Styling end */

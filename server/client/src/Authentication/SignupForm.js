@@ -45,8 +45,8 @@ const SignupForm = () => {
       {!isLoginMode ? (
         <LoginForm />
       ) : (
-        <div className="Auth-form-container">
-          <form className="Auth-form">
+        <div className="Auth-form-container w-100">
+          <form className="Auth-form w-100" style={{ maxWidth: "450px" }}>
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">Sign up</h3>
               <div className="form-group mt-3">

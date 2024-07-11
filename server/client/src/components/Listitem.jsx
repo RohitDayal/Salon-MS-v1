@@ -9,12 +9,12 @@ const Listitem = (props) => {
           <h5>
             <span>{service.name}</span>
             {".".repeat(
-              80 - service.name.length - service.price.toString().length
+              65 - service.name.length - service.price.toString().length
             )}
             ${" "}
             {typeof service.price === "string"
               ? service.price
-              : `$${service.price}`}
+              : `${service.price}`}
           </h5>
           <p>Service duration {service.duration}</p>
         </div>

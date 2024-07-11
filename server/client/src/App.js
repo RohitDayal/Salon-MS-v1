@@ -15,12 +15,13 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
 import Payment from "./utils/Payment";
+// import Navbar from "./Layout/Navbar";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <UserContextProvider>
-          <div style={{ height: "65px" }}></div>
+          <div style={{ height: "63px" }}></div>
           <ToastContainer />
           <Navbar />
           <ScrollToTop />

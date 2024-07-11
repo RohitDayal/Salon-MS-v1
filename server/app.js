@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
-const Razorpay = require("razorpay");
 
 const addSaloonRoute = require("./routes/addSaloon");
 const usersRoute = require("./routes/users");
@@ -35,7 +34,7 @@ app.get("*", (req, res) => {
 const port = process.env.PORT || 5000;
 const startServer = async () => {
   try {
-    await createTables();
+    // await createTables();
     app.listen(port, () => {
       console.log(`Server listening at port:${port}`);
     });

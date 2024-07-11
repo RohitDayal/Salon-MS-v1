@@ -10,7 +10,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="home-section" style={backgroundImageStyle}>
+      {/* <div className="home-section" style={backgroundImageStyle}>
         <div className="container ">
           <div className="row">
             <div className="col-12 col-md-6" style={{ textAlign: "left" }}>
@@ -42,10 +42,51 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="home-section" style={backgroundImageStyle}>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-6" style={{ textAlign: "left" }}>
+              <h1 className="heading-text">The Salon That Gives You Style</h1>
+              <h5 className="sub-heading-text">
+                Expert haircuts, precise shaves, and stylish beard trims
+                tailored to perfection
+              </h5>
+              <div className="button-container d-flex flex-column flex-md-row mt-md-4">
+                <Link
+                  to="/services"
+                  className="salon-menu-btn shadow mb-3 mb-md-0 me-md-4"
+                >
+                  VIEW SALON MENU
+                </Link>
+                <Link
+                  to="/book"
+                  className="salon-booking-btn shadow mb-3 mb-md-0 me-md-4"
+                >
+                  BOOK APPOINTMENT
+                </Link>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-6 opening-hour-container">
+              <div className="opening-hour-bottom-right">
+                <h2 className="opening-hour">
+                  Opening Hours
+                  <div className="time-schedule">
+                    <p>Mon - Fri: 9:00AM - 8:00PM</p>
+                    <p>Sat - Sun: 9:00AM - 8:00PM</p>
+                  </div>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="home-section-middle">
-        <p>YOUR HAIR, YOUR STYLE</p>
+      <div className="container text-center my-5 py-5">
+        <p className="mb-4" style={{ color: "#ef6f6f" }}>
+          YOUR HAIR, YOUR STYLE
+        </p>
         <h1>Services for progressive or traditional gentlemen</h1>
       </div>
 
@@ -58,7 +99,7 @@ const Home = () => {
           </div>
           <div className="col-12 col-md-4 mt-md-0 mb-md-0 mt-3 mb-3">
             <div className="custom-div-middle-1">
-              <h2>Don’t be ordinary, be extraordinary</h2>
+              <h2>Don't be ordinary, be extraordinary</h2>
               <p>
                 Sagittis congue augue an egestas integer velna purus purus magna
                 libero suscipit and egestas magna undo aliquam ipsum purus lorem

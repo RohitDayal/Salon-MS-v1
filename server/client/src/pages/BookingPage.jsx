@@ -60,14 +60,14 @@ const BookingPage = () => {
 
   return (
     <>
-      <div className="container my-5 px-4 pt-2 shadow" style={{ width: "80%" }}>
+      <div className="container my-5 px-md-4 pt-2 shadow" id="booking-section">
         <div className="booking-header">
           <h6 className="text-center">The Saloon</h6>
           <p className="px-2" style={{ fontSize: "12px" }}>
             From manicures to pedicures, facials to body massages, brows to
             lashes and waxing we're here to serve up “Amazing”. We're all about
-            spreading the love which means you can now BOOK ONLINE at any Sorbet
-            Salon. Do... Read More
+            spreading the love which means you can now BOOK ONLINE at any Salon.
+            Do... Read More
           </p>
         </div>
         <div className="row mt-2">

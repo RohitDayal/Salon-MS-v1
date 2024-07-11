@@ -27,6 +27,7 @@ const WeatherComponent = () => {
       },
       { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getCityName = async (latitude, longitude) => {

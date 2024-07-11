@@ -36,8 +36,12 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="Auth-form-container">
-      <form className="Auth-form" onSubmit={login}>
+    <div className="Auth-form-container w-100">
+      <form
+        className="Auth-form w-100"
+        onSubmit={login}
+        style={{ maxWidth: "450px" }}
+      >
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
           <div className="form-group mt-3">
